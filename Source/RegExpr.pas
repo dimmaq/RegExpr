@@ -1,5 +1,7 @@
 unit RegExpr;
 
+{$UNDEF UNICODE}
+
 {
      TRegExpr class library
      Delphi Regular Expressions
@@ -105,9 +107,9 @@ type
  RegExprString = WideString;
  REChar = WideChar;
  {$ELSE}
- PRegExprChar = PChar;
+ PRegExprChar = PAnsiChar;
  RegExprString = AnsiString; //###0.952 was string
- REChar = Char;
+ REChar = AnsiChar;
  {$ENDIF}
  TREOp = REChar; // internal p-code type //###0.933
  PREOp = ^TREOp;
